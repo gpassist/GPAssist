@@ -45,17 +45,8 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Models\\Appointment.cs",
-              "RelativeDocumentMoniker": "GpAssist\\Models\\Appointment.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Models\\Appointment.cs",
-              "RelativeToolTip": "GpAssist\\Models\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:12:28.373Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -67,8 +58,7 @@
               "RelativeToolTip": "GpAssist\\Models\\Doctor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:12:00.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T14:12:00.611Z"
             },
             {
               "$type": "Document",
@@ -80,8 +70,7 @@
               "RelativeToolTip": "GpAssist\\Models\\Patient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:11:17.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T14:11:17.779Z"
             },
             {
               "$type": "Document",
@@ -93,8 +82,7 @@
               "RelativeToolTip": "GpAssist\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:03:04.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T14:03:04.056Z"
             },
             {
               "$type": "Document",
@@ -106,8 +94,7 @@
               "RelativeToolTip": "GpAssist\\App.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:00:32.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T14:00:32.446Z"
             },
             {
               "$type": "Document",
@@ -117,10 +104,22 @@
               "RelativeDocumentMoniker": "GpAssist\\Services\\DatabaseService.cs",
               "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Services\\DatabaseService.cs",
               "RelativeToolTip": "GpAssist\\Services\\DatabaseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv3MAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T13:59:36.538Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "GpAssist\\Models\\Appointment.cs",
+              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Models\\Appointment.cs",
+              "RelativeToolTip": "GpAssist\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T14:12:28.373Z"
             },
             {
               "$type": "Document",
@@ -132,8 +131,7 @@
               "RelativeToolTip": "GpAssist\\MainPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T15:56:32.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T15:56:32.797Z"
             },
             {
               "$type": "Document",

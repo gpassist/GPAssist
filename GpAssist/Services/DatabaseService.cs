@@ -63,6 +63,53 @@ namespace GpAssist.Services
             return _database.DeleteAsync(user);
         }
 
-        
+        public Task<List<Patient>> GetPatientsAsync()
+        {
+            return _database.Table<Patient>().ToListAsync();
+        }
+
+        public Task<Patient> GetPatientByIdAsync(int patientId)
+        {
+            return _database.Table<Patient>().FirstOrDefaultAsync(p => p.Id == patientId);
+        }
+
+
+        public Task<Patient> GetPatientByUserId(int userId)
+        {
+            return _database.Table<Patient>().FirstOrDefaultAsync(p => p.UserId == userId);
+        }
+
+
+        public async Task<int> SavePatientAsync(Patient patient)
+        {
+            //return patient.Id == 0 ? _database.InsertAsync(patient) : _database.UpdateAsync(patient);
+
+            if (patient.Id == 0)
+            {
+                await _database.InsertAsync(patient);
+                return patient.Id;
+            }
+            else
+            {
+                await _database.UpdateAsync(patient);
+                return patient.Id;
+            }
+        }
+
+        public Task<List<Doctor>> GetAllDoctorsAsync()
+        {
+            return _database.Table<Doctor>().ToListAsync();
+        }
+
+        public Task<Doctor> GetDoctorByIdAsync(int doctorId)
+        {
+            return _database.Table<Doctor>().FirstOrDefaultAsync(d => d.Id == doctorId);
+        }
+
+        public Task<int> SaveDoctorAsync(Doctor doctor)
+        {
+            return doctor.Id == 0 ? _database.InsertAsync(doctor) : _database.UpdateAsync(doctor);
+        }
+
     }
 }
