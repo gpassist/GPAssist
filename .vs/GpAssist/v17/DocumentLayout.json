@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\c#\\GpAssist\\",
+  "WorkspaceRootPath": "D:\\GPAssist\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|e:\\c#\\gpassist\\gpassist\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|d:\\gpassist\\gpassist\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3C20EE95-2B33-4345-B129-730EBA2E50A9}|GpAssist\\GpAssist.csproj|solutionrelative:gpassist\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -52,9 +52,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Doctor.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Models\\Doctor.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\Models\\Doctor.cs",
               "RelativeDocumentMoniker": "GpAssist\\Models\\Doctor.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Models\\Doctor.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\Models\\Doctor.cs",
               "RelativeToolTip": "GpAssist\\Models\\Doctor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -64,9 +64,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Patient.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Models\\Patient.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\Models\\Patient.cs",
               "RelativeDocumentMoniker": "GpAssist\\Models\\Patient.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Models\\Patient.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\Models\\Patient.cs",
               "RelativeToolTip": "GpAssist\\Models\\Patient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -76,9 +76,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "User.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Models\\User.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\Models\\User.cs",
               "RelativeDocumentMoniker": "GpAssist\\Models\\User.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Models\\User.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\Models\\User.cs",
               "RelativeToolTip": "GpAssist\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -88,9 +88,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "App.xaml.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\App.xaml.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\App.xaml.cs",
               "RelativeDocumentMoniker": "GpAssist\\App.xaml.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\App.xaml.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\App.xaml.cs",
               "RelativeToolTip": "GpAssist\\App.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -100,11 +100,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DatabaseService.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Services\\DatabaseService.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\Services\\DatabaseService.cs",
               "RelativeDocumentMoniker": "GpAssist\\Services\\DatabaseService.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Services\\DatabaseService.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\Services\\DatabaseService.cs",
               "RelativeToolTip": "GpAssist\\Services\\DatabaseService.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAADwv3MAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAAwJ0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T13:59:36.538Z",
               "EditorCaption": ""
@@ -113,9 +113,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Appointment.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\Models\\Appointment.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "GpAssist\\Models\\Appointment.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\Models\\Appointment.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\Models\\Appointment.cs",
               "RelativeToolTip": "GpAssist\\Models\\Appointment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -125,9 +125,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "GpAssist\\MainPage.xaml.cs",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\MainPage.xaml.cs",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\MainPage.xaml.cs",
               "RelativeToolTip": "GpAssist\\MainPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -137,9 +137,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "E:\\c#\\GpAssist\\GpAssist\\MainPage.xaml",
+              "DocumentMoniker": "D:\\GPAssist\\GpAssist\\MainPage.xaml",
               "RelativeDocumentMoniker": "GpAssist\\MainPage.xaml",
-              "ToolTip": "E:\\c#\\GpAssist\\GpAssist\\MainPage.xaml",
+              "ToolTip": "D:\\GPAssist\\GpAssist\\MainPage.xaml",
               "RelativeToolTip": "GpAssist\\MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
