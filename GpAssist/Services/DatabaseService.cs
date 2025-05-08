@@ -110,6 +110,52 @@ namespace GpAssist.Services
         {
             return doctor.Id == 0 ? _database.InsertAsync(doctor) : _database.UpdateAsync(doctor);
         }
+        public async Task SeedDatabaseAsync()
+        {
+            try
+            {
+                var doctors = await GetAllDoctorsAsync();
+
+                if (doctors.Count == 0)
+                {
+                    await SaveDoctorAsync(new Doctor { Name = "Dr. Kerim Fadzan", Specialization = "Cardiology" });
+                    await SaveDoctorAsync(new Doctor { Name = "Dr. Armin Djulepa", Specialization = "Dermatology" });
+                    await SaveDoctorAsync(new Doctor { Name = "Dr. Kenan Catic", Specialization = "Neurology" });
+                    await SaveDoctorAsync(new Doctor { Name = "Dr. Mirza Djono", Specialization = "Pediatrics" });
+                    await SaveDoctorAsync(new Doctor { Name = "Dr. Denis Kukuljac", Specialization = "Pediatrics" });
+                    await SaveDoctorAsync(new Doctor { Name = "Dr. Alma Pandur", Specialization = "Pediatrics" });
+                }
+
+                var users = await GetUsersAsync();
+
+                var staffUsers = users.Where(u => u.Role == "Staff").ToList();
+
+                if (staffUsers.Count == 0)
+                {
+                    await SaveUserAsync(new User
+                    {
+                        Username = "admin",
+                        Email = "gpAssist@gmail.com",
+                        Password = HashPassword("admin123"),
+                        Role = "Staff",
+                        CreatedAt = DateTime.Now,
+                    }
+                    );
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error seeding database: {ex.Message}");
+            }
+
+        }
+
+        private string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
 
     }
 }
