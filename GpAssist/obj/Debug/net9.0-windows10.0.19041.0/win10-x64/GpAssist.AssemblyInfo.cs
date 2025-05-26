@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GpAssist")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f4f994720b0ca31908035b251e50615e2f002605")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+c795fd258d3b674c8ae1dd5b51a433c36862eacb")]
 [assembly: System.Reflection.AssemblyProductAttribute("GpAssist")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GpAssist")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

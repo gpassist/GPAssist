@@ -110,6 +110,66 @@ namespace GpAssist.Services
         {
             return doctor.Id == 0 ? _database.InsertAsync(doctor) : _database.UpdateAsync(doctor);
         }
+
+        public async Task<List<Appointment>> GetAllAppointmentsAsync()
+        {
+            return await _database.Table<Appointment>().ToListAsync();
+        }
+
+
+        public async Task<List<Appointment>> GetAppointmentByPatientIdAsync(int patientId)
+        {
+            var appointments = await _database.Table<Appointment>()
+                                       .Where(a => a.PatientId == patientId)
+                                       .OrderByDescending(a => a.AppointmentDate)
+                                       .ToListAsync();
+
+            // Log the retrieved appointments
+
+            //var appointments = await _database.QueryAsync<Appointment>("SELECT * FROM Appointment WHERE PatientId = ? ORDER BY AppointmentDate DESC", patientId);
+
+            foreach (var appointment in appointments)
+            {
+                Debug.WriteLine($"Retrieved Appointment - Id: {appointment.Id}, PatientId: {appointment.PatientId}, DoctorId: {appointment.DoctorId}, Date: {appointment.AppointmentDate}, Status: {appointment.Status}");
+            }
+
+            return appointments;
+        }
+
+        public Task<List<Appointment>> GetUpcommingAppointmentsAsync()
+        {
+            return _database.Table<Appointment>()
+                .Where(a => a.AppointmentDate >= DateTime.Now && a.Status == "Scheduled")
+                .OrderBy(a => a.AppointmentDate)
+                .ToListAsync();
+        }
+
+        public async Task<int> SaveAppointemntAsync(Appointment appointment)
+        {
+            //return appointment.Id == 0 ? _database.InsertAsync(appointment) : _database.UpdateAsync(appointment);
+            if (appointment.Id == 0)
+            {
+                await _database.InsertAsync(appointment);
+                Debug.WriteLine($"Inserted Appointment ID: {appointment.Id}");
+                return appointment.Id;
+            }
+            else
+            {
+                await _database.UpdateAsync(appointment);
+                return appointment.Id;
+            }
+        }
+
+
+        public async Task<Appointment> GetAppointmentById(int appointmentId)
+        {
+            return await _database.Table<Appointment>().FirstOrDefaultAsync(a => a.Id == appointmentId);
+        }
+
+        public Task<int> DeleteAppointmentAsync(Appointment appointment)
+        {
+            return _database.DeleteAsync(appointment);
+        }
         public async Task SeedDatabaseAsync()
         {
             try
