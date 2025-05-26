@@ -3,10 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.Auth.LoginPage"
              Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    
+    <VerticalStackLayout Spacing="15"  Padding="20">
+
+        <Label Text="Sign In" FontSize="32" HorizontalOptions="Center" 
+               Margin="0,0,0,20"/>
+
+        <Image Source="login.svg" 
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Margin="0,0,0,20"/>
+
+
+        <Label Text="Username" />
+        <Entry x:Name="UsernameEntry" Placeholder="Enter your username" />
+
+        <Label Text="Password" />
+        <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True" />
+
+        <Button Text="Login" Clicked="LoginButton_Clicked" Margin="0,20,0,0" x:Name="LoginButton"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Don't have an account? " />
+            <Label Text="Sign Up" TextColor="Blue" TextDecorations="Underline" x:Name="SignUp">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
+    
 </ContentPage>
