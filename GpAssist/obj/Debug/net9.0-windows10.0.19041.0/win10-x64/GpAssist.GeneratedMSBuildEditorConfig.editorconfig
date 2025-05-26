@@ -62,3 +62,21 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GpAssist.Views.Auth.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Auth\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Auth\LoginPage.xaml
+
+[E:/c\#/GPAssist/GpAssist/Views/Auth/RegistrationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GpAssist.Views.Auth.RegistrationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Auth\RegistrationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Auth\RegistrationPage.xaml
+
+[E:/c\#/GPAssist/GpAssist/Views/PatientPages/MakeAppointmentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GpAssist.Views.PatientPages.MakeAppointmentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PatientPages\MakeAppointmentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PatientPages\MakeAppointmentPage.xaml
+
+[E:/c\#/GPAssist/GpAssist/Views/StaffPages/StaffDashboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GpAssist.Views.StaffPages.StaffDashboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\StaffPages\StaffDashboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\StaffPages\StaffDashboardPage.xaml
