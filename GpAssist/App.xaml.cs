@@ -15,7 +15,7 @@ namespace GpAssist
         {
             InitializeComponent();
 
-            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "appointments.db");
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "gpAssist.db");
 
 
             Database = new DatabaseService(dbPath);
