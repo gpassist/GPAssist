@@ -3,10 +3,82 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.StaffPages.StaffDashboardPage"
              Title="StaffDashboardPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="All appointments"
+                     Clicked="OnAllAppointmentsClicked"
+                     IconImageSource="selectall.png"/>
+        <ToolbarItem Text="Logout"
+                     IconImageSource="logout.png"
+                     Clicked="OnLogoutClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,*"
+          Padding="20">
+        <VerticalStackLayout>
+            <Label Text="Upcomming Appointments"
+                   FontSize="26"
+                   HorizontalOptions="Center"/>
+            <Label Text="Next 7 Days"
+                   FontSize="18"
+                   HorizontalOptions="Center"/>
+            <Image
+                Source="upcommingappointments.png"
+                HeightRequest="200"/>
+        </VerticalStackLayout>
+
+        <CollectionView x:Name="AppointmentsCollectionView"
+                        Grid.Row="1"
+                        Margin="0,20,0,0"
+                        EmptyView="No upcomming appointments found">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,10"
+                           Padding="15"
+                           BorderColor="LightGray">
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+                              ColumnDefinitions="*,Auto"
+                              RowSpacing="5">
+
+                            <Label Text="{Binding DoctorName}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"/>
+                            <Label Grid.Row="1"                                  
+                                   Text="{Binding PatientName, StringFormat='Patient: {0}'}"
+                                   />
+                            <Label Grid.Row="2"                                                                     
+                                   Text="{Binding PatientAge, StringFormat='Age: {0}'}"/>
+
+                            <Label Grid.Row="3"
+                                   Text="{Binding AppointmentDate, StringFormat='{0:dddd, MMMM d, yyyy}'}"/>
+
+                            <Label Grid.Row="4"
+                                   Text="{Binding AppointmentTime, StringFormat='{0:h:mm tt}'}"/>
+
+                            <Label Grid.Row="5"
+                                   Text="{Binding Status, StringFormat='{0}'}" TextColor="{Binding StatusColor}"/>
+
+                            <VerticalStackLayout Grid.Column="1"
+                                                 Grid.RowSpan="5"
+                                                 VerticalOptions="Center"
+                                                 Spacing="10">
+                                <Button Text="Edit"
+                                        x:Name="Edit"
+                                        CommandParameter="{Binding Id}"
+                                        Clicked="OnEditAppointmentClicked"/>
+
+                                <Button Text="Cancel"
+                                        x:Name="Cancel"
+                                        CommandParameter="{Binding Id}"
+                                        Clicked="OnCancelAppointmentClicked"
+                                        BackgroundColor="DarkRed"/>
+
+                            </VerticalStackLayout>
+                        </Grid>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
 </ContentPage>
