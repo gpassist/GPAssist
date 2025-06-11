@@ -2,11 +2,97 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.PatientPages.PatientAppointmentPage"
-             Title="PatientAppointmentPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             BackgroundColor="#F9F9F9">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Appointment"
+                     IconImageSource="button.png"
+                     x:Name="AddAppointment"
+                     Clicked="OnAddAppointmentClicked" />
+        <ToolbarItem Text="Logout"
+                     IconImageSource="logout.png"
+                     x:Name="Logout"
+                     Clicked="OnLogoutClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,*"
+          Padding="20">
+
+        <Label Text="My Appointments"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#333"/>
+
+        <CollectionView x:Name="ApointmentsCollectionView"
+                        Grid.Row="1"
+                        Margin="0,20,0,0"
+                        EmptyView="No appointments found">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,10"
+                           Padding="15"
+                           BorderColor="#DDD"
+                           CornerRadius="12"
+                           BackgroundColor="White"
+                           HasShadow="True">
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto"
+                              ColumnDefinitions="*,Auto">
+
+                            <Label Text="{Binding DoctorName}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#2196F3"/>
+
+                            <Label Grid.Row="1" 
+                                   Text="{Binding AppointmentDate, StringFormat='{0:dddd, MMMM d, yyyy}'}"
+                                   FontSize="14"
+                                   TextColor="#666"/>
+
+                            <Label Grid.Row="2" 
+                                   Text="{Binding AppointmentTime, StringFormat='{0:hh:mm tt}'}"
+                                   FontSize="14"
+                                   TextColor="#666"/>
+
+                            <Label Grid.Row="3" 
+                                   Text="{Binding Status}" 
+                                   TextColor="{Binding StatusColor}"
+                                   FontAttributes="Bold"
+                                   FontSize="14"/>
+
+                            <HorizontalStackLayout Grid.Column="1"
+                                                   Grid.RowSpan="4"
+                                                   VerticalOptions="Center"
+                                                   Spacing="8">
+
+                                <Button Text="Edit"
+                                        x:Name="EditButton"
+                                        Clicked="OnEditAppointmentClicked"
+                                        CommandParameter="{Binding Id}"
+                                        BackgroundColor="#FFC107"
+                                        TextColor="White"
+                                        CornerRadius="8"
+                                        WidthRequest="75"
+                                        HeightRequest="35"
+                                        FontAttributes="Bold"/>
+
+                                <Button Text="Cancel"
+                                        x:Name="CancelButton"
+                                        Clicked="OnCancelAppointmentClicked"
+                                        CommandParameter="{Binding Id}"
+                                        BackgroundColor="#F44336"
+                                        TextColor="White"
+                                        CornerRadius="8"
+                                        WidthRequest="75"
+                                        HeightRequest="35"
+                                        FontAttributes="Bold"/>
+
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
 </ContentPage>

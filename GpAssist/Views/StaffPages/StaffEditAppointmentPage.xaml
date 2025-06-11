@@ -2,11 +2,101 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.StaffPages.StaffEditAppointmentPage"
-             Title="StaffEditAppointmentPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Edit Appointment"
+             BackgroundColor="#F9F9F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="20">
+
+            <Label Text="Edit Appointment"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333"/>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Patient"
+                       FontAttributes="Bold"
+                       TextColor="#555"/>
+                <Picker x:Name="PatientPicker"
+                        Title="Select a patient"
+                        BackgroundColor="White"
+                        Margin="0,0,0,10"
+                        
+                        HeightRequest="40"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Doctor"
+                       FontAttributes="Bold"
+                       TextColor="#555"/>
+                <Picker x:Name="DoctorPicker"
+                        Title="Select a doctor"
+                        BackgroundColor="White"
+                        Margin="0,0,0,10"
+                        
+                        HeightRequest="40"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Status"
+                       FontAttributes="Bold"
+                       TextColor="#555"/>
+                <Picker x:Name="StatusPicker"
+                        Title="Select Status"
+                        BackgroundColor="White"
+                        Margin="0,0,0,10"
+                        
+                        HeightRequest="40">
+                    <Picker.Items>
+                        <x:String>Scheduled</x:String>
+                        <x:String>Completed</x:String>
+                        <x:String>Cancelled</x:String>
+                    </Picker.Items>
+                </Picker>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Date"
+                       FontAttributes="Bold"
+                       TextColor="#555"/>
+                <DatePicker x:Name="AppointmentDatePicker"
+                            BackgroundColor="White"
+                            Margin="0,0,0,10"
+                            MinimumDate="{Binding TodayDate}"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Time"
+                       FontAttributes="Bold"
+                       TextColor="#555"/>
+                <TimePicker x:Name="AppointmentTimePicker"
+                            BackgroundColor="White"
+                            Margin="0,0,0,10"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Notes"
+                       FontAttributes="Bold"
+                       TextColor="#555"/>
+                <Editor x:Name="NotesEditor"
+                        Placeholder="Enter any notes"
+                        HeightRequest="100"
+                        BackgroundColor="White"
+                        Margin="0,0,0,10"
+                        />
+            </VerticalStackLayout>
+
+            <Button Text="Save Changes"
+                    Clicked="OnSaveChangesClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HeightRequest="45"
+                    CornerRadius="10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

@@ -2,36 +2,61 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.Auth.LoginPage"
-             Title="LoginPage">
-    
-    <VerticalStackLayout Spacing="15"  Padding="20">
+             BackgroundColor="#F9F9F9">
 
-        <Label Text="Sign In" FontSize="32" HorizontalOptions="Center" 
-               Margin="0,0,0,20"/>
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
 
-        <Image Source="login.svg" 
-            WidthRequest="250"
-            HorizontalOptions="Center"
-            Margin="0,0,0,20"/>
+            <Label Text="Welcome Back 👋" 
+                   FontSize="28" 
+                   HorizontalOptions="Center" 
+                   TextColor="#333" 
+                   FontAttributes="Bold" />
 
+            <Image Source="login.svg" 
+                   WidthRequest="200" 
+                   HorizontalOptions="Center" />
 
-        <Label Text="Username" />
-        <Entry x:Name="UsernameEntry" Placeholder="Enter your username" />
+            <Frame HasShadow="False" BorderColor="#DDD" CornerRadius="12" Padding="10">
+                <VerticalStackLayout Spacing="10">
 
-        <Label Text="Password" />
-        <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True" />
+                    <Label Text="Username" TextColor="#666" FontSize="14"/>
+                    <Entry x:Name="UsernameEntry" 
+                           Placeholder="Enter your username"
+                           BackgroundColor="#FFF" 
+                           TextColor="#333" 
+                            />
 
-        <Button Text="Login" Clicked="LoginButton_Clicked" Margin="0,20,0,0" x:Name="LoginButton"/>
+                    <Label Text="Password" TextColor="#666" FontSize="14"/>
+                    <Entry x:Name="PasswordEntry" 
+                           Placeholder="Enter your password" 
+                           IsPassword="True"
+                           BackgroundColor="#FFF" 
+                           TextColor="#333" 
+                            />
 
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <Label Text="Don't have an account? " />
-            <Label Text="Sign Up" TextColor="Blue" TextDecorations="Underline" x:Name="SignUp">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                </Label.GestureRecognizers>
-            </Label>
-        </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
 
-    </VerticalStackLayout>
-    
+            <Button Text="Login" 
+                    Clicked="LoginButton_Clicked" 
+                    x:Name="LoginButton"
+                    BackgroundColor="#2196F3" 
+                    TextColor="White" 
+                    CornerRadius="8"
+                    HeightRequest="50"
+                    FontAttributes="Bold" />
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Don't have an account?" TextColor="#666" />
+                <Label Text=" Sign Up" TextColor="#2196F3" FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

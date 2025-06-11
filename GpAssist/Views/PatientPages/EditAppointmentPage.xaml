@@ -2,37 +2,57 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.PatientPages.EditAppointmentPage"
-             Title="EditAppointmentPage">
+             Title="Edit Appointment"
+             BackgroundColor="#F9F9F9">
+
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+        <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
 
-            <Label Text="Edit Appointment"
-                   FontSize="26" 
-                   HorizontalOptions="Center"/>
+            <Label Text="Edit Your Appointment ✏️"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333" />
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Docotr"/>
-                <Picker x:Name="DoctorPicker"
-                        Title="Select a doctor"/>
-            </VerticalStackLayout>
+            <Frame HasShadow="False" BorderColor="#DDD" CornerRadius="12" Padding="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="15">
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Date" />
-                <DatePicker x:Name="AppointmentDatePicker" MinimumDate="{Binding TodayDate}" />
-            </VerticalStackLayout>
+                    <Label Text="Doctor" TextColor="#666" FontSize="14" />
+                    <Picker x:Name="DoctorPicker"
+                            Title="Select a doctor"
+                            BackgroundColor="#FFF"
+                            TextColor="#333"
+                             />
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Time" />
-                <TimePicker x:Name="AppointmentTimePicker" />
-            </VerticalStackLayout>
+                    <Label Text="Date" TextColor="#666" FontSize="14" />
+                    <DatePicker x:Name="AppointmentDatePicker"
+                                MinimumDate="{Binding TodayDate}"
+                                BackgroundColor="#FFF"
+                                TextColor="#333" />
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Notes" />
-                <Editor x:Name="NotesEditor" Placeholder="Enter any notes or symptoms" HeightRequest="100" />
-            </VerticalStackLayout>
+                    <Label Text="Time" TextColor="#666" FontSize="14" />
+                    <TimePicker x:Name="AppointmentTimePicker"
+                                BackgroundColor="#FFF"
+                                TextColor="#333" />
 
+                    <Label Text="Notes" TextColor="#666" FontSize="14" />
+                    <Editor x:Name="NotesEditor"
+                            Placeholder="Add notes or symptoms here..."
+                            HeightRequest="80"
+                            BackgroundColor="#FFF"
+                            TextColor="#333"
+                             />
 
-            <Button Text="Save Changes" Clicked="OnSaveChangesClicked"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Save Changes"
+                    Clicked="OnSaveChangesClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="50"
+                    FontAttributes="Bold" />
 
         </VerticalStackLayout>
     </ScrollView>

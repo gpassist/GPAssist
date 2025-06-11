@@ -2,47 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GpAssist.Views.PatientPages.MakeAppointmentPage"
-             Title="MakeAppointmentPage">
+             BackgroundColor="#F9F9F9">
+
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="My Appointments" Clicked="OnMyAppointmentsClicked"
+        <ToolbarItem Text="My Appointments" 
+                     Clicked="OnMyAppointmentsClicked"
                      IconImageSource="selectall.png"/>
 
-        <ToolbarItem Text="Logout" Clicked="OnLogoutCliked"
+        <ToolbarItem Text="Logout" 
+                     Clicked="OnLogoutCliked"
                      IconImageSource="logout.png"/>
     </ContentPage.ToolbarItems>
 
     <ScrollView>
-        <VerticalStackLayout Padding="20"
-                         Spacing="20">
-            <Label Text="Make an appointment"
-               FontSize="26"
-               HorizontalOptions="Center"/>
+        <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Select a doctor"/>
-                <Picker x:Name="DoctorPicker" Title="Select a doctor"/>
-            </VerticalStackLayout>
+            <Label Text="Book an Appointment 🩺" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"
+                   TextColor="#333" />
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Select Date"/>
-                <DatePicker x:Name="AppointmentDatePicker" MinimumDate="{Binding TodayDate}"/>
-            </VerticalStackLayout>
+            <Frame HasShadow="False" BorderColor="#DDD" CornerRadius="12" Padding="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="15">
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Select Time"/>
-                <TimePicker x:Name="AppointmentTimePicker"/>
-            </VerticalStackLayout>
+                    <Label Text="Select Doctor" TextColor="#666" FontSize="14" />
+                    <Picker x:Name="DoctorPicker" 
+                            Title="Choose your doctor" 
+                            BackgroundColor="#FFF" 
+                            TextColor="#333"
+                             />
 
-            <VerticalStackLayout Spacing="5">
-                <Label Text="Notes"/>
-                <Editor x:Name="NotesEditor"
-                    Placeholder="Enter text here"
-                    HeightRequest="100"/>
-            </VerticalStackLayout>
+                    <Label Text="Select Date" TextColor="#666" FontSize="14" />
+                    <DatePicker x:Name="AppointmentDatePicker" 
+                                MinimumDate="{Binding TodayDate}" 
+                                BackgroundColor="#FFF" 
+                                TextColor="#333"
+                                Margin="0,0,0,10" />
+
+                    <Label Text="Select Time" TextColor="#666" FontSize="14" />
+                    <TimePicker x:Name="AppointmentTimePicker" 
+                                BackgroundColor="#FFF" 
+                                TextColor="#333"
+                                Margin="0,0,0,10" />
+
+                    <Label Text="Notes" TextColor="#666" FontSize="14" />
+                    <Editor x:Name="NotesEditor" 
+                            Placeholder="Any notes for the doctor?" 
+                            HeightRequest="80" 
+                            BackgroundColor="#FFF" 
+                            TextColor="#333" 
+                            />
+
+                </VerticalStackLayout>
+            </Frame>
 
             <Button x:Name="OnScheduleAppointment" 
-                Text="Schedule Appointment"
-                Clicked="OnScheduledAppointmentClicked"/>
+                    Text="Schedule Appointment" 
+                    Clicked="OnScheduledAppointmentClicked"
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    CornerRadius="8" 
+                    HeightRequest="50" 
+                    FontAttributes="Bold" />
 
         </VerticalStackLayout>
     </ScrollView>
