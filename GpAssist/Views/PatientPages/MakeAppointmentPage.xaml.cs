@@ -1,8 +1,8 @@
-using GpAssist.Helpers;
 using System.Collections.ObjectModel;
-using GpAssist.Views.PatientPages;
 using GpAssist.Models;
+using GpAssist.Helpers;
 using System.Diagnostics;
+using GpAssist;
 
 namespace GpAssist.Views.PatientPages;
 
@@ -97,13 +97,36 @@ public partial class MakeAppointmentPage : ContentPage
                 return;
             }
 
+            var appointmentDate = AppointmentDatePicker.Date;
+            var appointmentTime = AppointmentTimePicker.Time;
             var appoinmentDateTime = AppointmentDatePicker.Date.Add(AppointmentTimePicker.Time);
 
             // validacija odabranog vremena
 
+            if (appointmentTime < new TimeSpan(8, 0, 0) || appointmentTime > new TimeSpan(19, 0, 0))
+            {
+                await DisplayAlert("Error", "Appointments can only be made between 08:00 and 19:00", "OK");
+                return;
+            }
+
             if (appoinmentDateTime <= DateTime.Now)
             {
                 await DisplayAlert("Error", "Please select a future date and time", "OK");
+                return;
+            }
+
+            //provjera da li postoji vec kreiran termin za tog doktora u to vrijeme
+
+            var existingAppointments = await App.Database.GetAppointmentByDoctorIdAsync(selectedDoctor.Id);
+
+            bool isConflict = existingAppointments.Any(a =>
+                a.AppointmentDate.Date == appoinmentDateTime.Date &&
+                a.AppointmentDate.TimeOfDay == appoinmentDateTime.TimeOfDay
+            );
+
+            if (isConflict)
+            {
+                await DisplayAlert("Error", "The selected doctor already has an appointment at this time.", "OK");
                 return;
             }
 
@@ -131,7 +154,7 @@ public partial class MakeAppointmentPage : ContentPage
 
 
             // prebaci korisnika na sve zakazane termine
-            await Navigation.PushAsync(new PatientAppointmentPage());
+            await Navigation.PushAsync(new PatientAppointmentsPage());
         }
         catch (Exception ex)
         {
@@ -141,7 +164,7 @@ public partial class MakeAppointmentPage : ContentPage
 
     private async void OnMyAppointmentsClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new PatientAppointmentPage());
+        await Navigation.PushAsync(new PatientAppointmentsPage());
     }
 
     private async void OnLogoutCliked(object sender, EventArgs e)

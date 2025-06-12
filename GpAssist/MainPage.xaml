@@ -1,30 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GpAssist.MainPage">
-    <VerticalStackLayout 
-        Spacing="25" 
-        Padding="30" 
-        VerticalOptions="Center">
+             x:Class="GpAssist.MainPage"
+             BackgroundColor="#F5F7FA">
 
-        <Image Source="welcomepage.svg" 
-               HeightRequest="300" 
+    <VerticalStackLayout 
+        Spacing="30" 
+        Padding="40,60"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+        <Image Source="welcomepage.svg"
+               Aspect="AspectFit"
+               HeightRequest="250"
+               WidthRequest="250"
                HorizontalOptions="Center"/>
 
-        <Label Text="Appointments" 
-               FontSize="32" 
+        <Label Text="GP Assist" 
+               FontSize="36" 
+               FontAttributes="Bold"
+               TextColor="#333333"
                HorizontalOptions="Center" />
 
         <Label Text="Your health is our priority" 
-               FontSize="18" 
+               FontSize="18"
+               TextColor="#666666"
                HorizontalOptions="Center" />
 
-        <Button x:Name="ContinueButton"
-                Text="Continue" 
-                SemanticProperties.Hint="Continue to Sing Up or Sing In"
-                Clicked="ContinueButton_Clicked"
-                HorizontalOptions="Fill" />
-
+        <Frame HasShadow="True"
+               Padding="0"
+               CornerRadius="12"
+               IsClippedToBounds="True"
+               WidthRequest="200"
+               HorizontalOptions="Center">
+            <Button x:Name="ContinueButton"
+                    Text="Continue" 
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#2196F3"
+                    HeightRequest="50"
+                    Clicked="ContinueButton_Clicked"/>
+        </Frame>
 
     </VerticalStackLayout>
 

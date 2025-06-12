@@ -160,6 +160,10 @@ namespace GpAssist.Services
             }
         }
 
+        public async Task<List<Appointment>> GetAppointmentByDoctorIdAsync(int doctorId)
+        {
+            return await _database.Table<Appointment>().Where(a => a.DoctorId == doctorId).ToListAsync();
+        }
 
         public async Task<Appointment> GetAppointmentById(int appointmentId)
         {

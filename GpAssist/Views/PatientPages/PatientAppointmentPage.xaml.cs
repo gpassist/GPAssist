@@ -42,18 +42,11 @@ namespace GpAssist.Views.PatientPages
         private ObservableCollection<AppointmentViewModel> _appointments;
 
         private Patient _currentPatient;
-
-
         public PatientAppointmentsPage()
         {
             InitializeComponent();
 
             //BindingContext = this;
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
         }
 
         protected override void OnAppearing()
@@ -101,7 +94,7 @@ namespace GpAssist.Views.PatientPages
                 }
 
                 // izvor collection viewa
-
+                
                 ApointmentsCollectionView.ItemsSource = _appointments;
 
 
